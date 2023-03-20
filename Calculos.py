@@ -12,3 +12,11 @@ def ePrimo(numero):
         resposta = True
 
     return resposta
+
+def proximoNumeroPrimo(numero):
+    numero = numero + 1
+
+    while not ePrimo(numero):
+        numero = numero + 1
+
+    return numero
