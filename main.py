@@ -1,2 +1,4 @@
+from  Calculos import ePrimo
+
 if __name__ == '__main__':
-    print("Ola Mundo!")
+    numero1TXT = int(input("Digite um numero: "))
