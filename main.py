@@ -3,6 +3,12 @@ from Calculos import proximoNumeroPrimo
 def exibir(numero1, numero2, primo):
     print(numero1, "-", numero2, "|", primo)
 
+def eDivisivel(numero, fatorPrimo):
+    resposta = False
+    if numero % fatorPrimo == 0:
+        resposta = True
+    return resposta
+
 if __name__ == '__main__':
     numeroPrimo = 2
     repita = True
@@ -15,17 +21,17 @@ if __name__ == '__main__':
     numero2 = int(numero2TXT)
 
     while repita:
-        if numero1 % numeroPrimo == 0 and numero2 % numeroPrimo == 0:
+        if eDivisivel(numero1, numeroPrimo) and eDivisivel(numero2, numeroPrimo):
             exibir(numero1, numero2, numeroPrimo)
             listaNumerosPrimos.append(numeroPrimo)
             numero1 = int(numero1 / numeroPrimo)
             numero2 = int(numero2 / numeroPrimo)
         else:
-            if numero1 % numeroPrimo == 0:
+            if eDivisivel(numero1, numeroPrimo):
                 exibir(numero1, numero2, numeroPrimo)
                 numero1 = int(numero1 / numeroPrimo)
             else:
-                if numero2 % numeroPrimo == 0:
+                if eDivisivel(numero2, numeroPrimo):
                     exibir(numero1, numero2, numeroPrimo)
                     numero2 = int(numero2 / numeroPrimo)
                 else:
