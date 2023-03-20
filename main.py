@@ -1,13 +1,8 @@
 from Calculos import proximoNumeroPrimo
+from Calculos import eDivisivel
 
 def exibir(numero1, numero2, primo):
     print(numero1, "-", numero2, "|", primo)
-
-def eDivisivel(numero, fatorPrimo):
-    resposta = False
-    if numero % fatorPrimo == 0:
-        resposta = True
-    return resposta
 
 if __name__ == '__main__':
     numeroPrimo = 2

@@ -20,3 +20,9 @@ def proximoNumeroPrimo(numero):
         numero = numero + 1
 
     return numero
+
+def eDivisivel(numero, fatorPrimo):
+    resposta = False
+    if numero % fatorPrimo == 0:
+        resposta = True
+    return resposta
