@@ -10,7 +10,7 @@ def ePrimo(numero):
     contar = 0
 
     while (posicao <= numero) and (contar != 2):
-        if numero % posicao == 0:
+        if eDivisivel(numero, posicao):
             contar = contar + 1
         posicao = posicao + 1
 

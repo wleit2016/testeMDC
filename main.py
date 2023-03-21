@@ -34,3 +34,11 @@ if __name__ == '__main__':
 
         if numero1 == 1 and numero2 == 1:
             repita = False
+
+    exibir(numero1, numero2, "")
+
+    multiplicar = 1
+
+    for nume in listaNumerosPrimos:
+        multiplicar = multiplicar * nume
+    print("MDC = ", str(multiplicar))
